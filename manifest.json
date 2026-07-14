@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "PDF Sentence Navigator",
+  "version": "1.0.0",
+  "description": "PDF დოკუმენტში წინადადებებს შორის გადაადგილება TAB / SHIFT+TAB კლავიშებით, ვიზუალური მონიშვნით. ყველაფერი მუშაობს ლოკალურად, ტექსტი გარეთ არ იგზავნება.",
+
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "declarativeNetRequest",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*",
+    "file:///*"
+  ],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PDF Sentence Navigator"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "viewer/viewer.html",
+        "viewer/viewer.js",
+        "viewer/viewer.css",
+        "lib/pdfjs/*",
+        "lib/pdfjs/cmaps/*",
+        "lib/pdfjs/standard_fonts/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
