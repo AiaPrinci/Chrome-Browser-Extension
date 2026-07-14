@@ -60,7 +60,7 @@ TESTEXT/
 1. ჩამოტვირთეთ ან დააკლონირეთ GitHub რეპოზიტორია.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/AiaPrinci/Chrome-Browser-Extension.git
 ```
 
 2. გახსენით Google Chrome.

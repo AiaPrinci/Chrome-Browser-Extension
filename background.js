@@ -21,7 +21,7 @@ async function registerPdfRedirectRule() {
 };
 
   const existing = await chrome.declarativeNetRequest.getDynamicRules();
-  const removeRuleIds = existing.map((r) => r.id);
+  const removeRuleIds = [RULE_ID];
 
   await chrome.declarativeNetRequest.updateDynamicRules({
     removeRuleIds,
